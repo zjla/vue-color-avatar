@@ -7,13 +7,13 @@
 
 </div>
 
-<a href="https://vue-color-avatar.vercel.app">
+<a href="https://vue-color-avatar.leoku.dev">
   <img src="./images/social-preview-1.png" alt="website-cover" />
 </a>
 
 ## 在线预览
 
-[`https://vue-color-avatar.vercel.app`](https://vue-color-avatar.vercel.app)
+[`https://vue-color-avatar.leoku.dev`](https://vue-color-avatar.leoku.dev)
 
 ## 介绍
 
@@ -50,14 +50,7 @@ yarn install
 yarn dev
 ```
 
-## Docker 快速部署
-
-你可以直接使用我已经构建好的镜像来运行
-```sh
-docker run -d -t -p 5173:5173 --name vue-color-avatar --restart=always docker.io/wenyang0/vue-color-avatar:latest
-```
-
-或者，如果您愿意，也可以自己手动编译。
+### Docker 快速部署
 
 ```sh
 #下载代码
@@ -65,9 +58,16 @@ git clone https://github.com/Codennnn/vue-color-avatar.git
 
 #docker 编译
 cd vue-color-avatar/
-docker build -t vue-color-avatar:v1 .
+docker build -t vue-color-avatar:latest .
 
 #启动服务
-docker run -d -t -p 5173:5173 --name vue-color-avatar --restart=always vue-color-avatar:v1
+docker run -d -p 3000:80 --name vue-color-avatar vue-color-avatar:latest
 ```
-最后,打开你的浏览器访问服务的地址 http://serverIP:5173 即可
+
+最后，打开你的浏览器访问服务的地址 http://localhost:3000 即可。
+
+### 在 Zeabur 中部署
+
+我们的项目由 [Zeabur](https://zeabur.com?referralCode=Codennnn&utm_source=Codennnn) 提供服务器支持，高质量的服务器服务保障了我们项目的稳定运行。需要优质的服务器服务？点击链接了解他们！
+
+[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=Codennnn&utm_source=Codennnn)

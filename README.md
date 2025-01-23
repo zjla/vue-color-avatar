@@ -7,13 +7,13 @@
 
 </div>
 
-<a href="https://vue-color-avatar.vercel.app">
+<a href="https://vue-color-avatar.leoku.dev">
   <img src="./images/social-preview-1.png" alt="website-cover" />
 </a>
 
 ## Preview
 
-[`https://vue-color-avatar.vercel.app`](https://vue-color-avatar.vercel.app)
+[`https://vue-color-avatar.leoku.dev`](https://vue-color-avatar.leoku.dev)
 
 ## Introduction
 
@@ -49,22 +49,25 @@ yarn dev
 
 ## Docker deploy
 
-You can directly run using the image I have already built.
 ```sh
-docker run -d -t -p 5173:5173 --name vue-color-avatar --restart=always docker.io/wenyang0/vue-color-avatar:latest
-```
-
-Or, you can manually compile it yourself if you prefer.
-
-```sh
-#clone the code 
+#clone the code
 git clone https://github.com/Codennnn/vue-color-avatar.git
 
-#docker build 
+#docker build
 cd vue-color-avatar/
-docker build -t vue-color-avatar:v1 .
+docker build -t vue-color-avatar:latest .
 
-#start server 
-docker run -d -t -p 5173:5173 --name vue-color-avatar --restart=always vue-color-avatar:v1
+#start server
+docker run -d -p 3000:80 --name vue-color-avatar vue-color-avatar:latest
 ```
-Finally, open your browser and access the service's address at http://serverIP:5173
+
+Once the container is running, open your browser and visit:
+
+- http://localhost:3000 (if running locally)
+- http://your-server-ip:3000 (if running on a server)
+
+### Deployed on Zeabur
+
+Our project is powered by [Zeabur](https://zeabur.com?referralCode=Codennnn&utm_source=Codennnn). Their high-quality server services ensure the stable operation of our project. Need quality server services? Check them out via the link!
+
+[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=Codennnn&utm_source=Codennnn)
